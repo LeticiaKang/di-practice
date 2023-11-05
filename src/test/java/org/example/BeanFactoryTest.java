@@ -28,7 +28,7 @@ public class BeanFactoryTest {
         beanFactory = new BeanFactory(preInstantiatedClazz);
     }
 
-    //Class<? extends Annotation>... annotations : Annotation타입이 여러개 들어와도 됨.
+    //Class<? extends Annotation>... annotations : Annotation타입이 여러개 들어와도 됨
     private Set<Class<?>> getTypesAnnotatedWith(Class<? extends Annotation>... annotations) {
         return Arrays.stream(annotations)
                 .flatMap(annotation -> reflections.getTypesAnnotatedWith(annotation).stream())
